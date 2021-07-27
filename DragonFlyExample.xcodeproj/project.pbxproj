@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CEACDAF1FB2807AC5AC9968 /* Pods_DragonFlyExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372B8DBFCA1D1C0DC29E15A0 /* Pods_DragonFlyExample.framework */; };
 		E632C3FB26B0322D00F69B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E632C3FA26B0322D00F69B14 /* AppDelegate.swift */; };
 		E632C3FD26B0322D00F69B14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E632C3FC26B0322D00F69B14 /* SceneDelegate.swift */; };
 		E632C3FF26B0322D00F69B14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E632C3FE26B0322D00F69B14 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F37FD00B24F979D6C5E5F1F /* Pods-DragonFlyExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonFlyExample.release.xcconfig"; path = "Target Support Files/Pods-DragonFlyExample/Pods-DragonFlyExample.release.xcconfig"; sourceTree = "<group>"; };
+		372B8DBFCA1D1C0DC29E15A0 /* Pods_DragonFlyExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragonFlyExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9414CA449EF1EF7805F1D803 /* Pods-DragonFlyExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonFlyExample.debug.xcconfig"; path = "Target Support Files/Pods-DragonFlyExample/Pods-DragonFlyExample.debug.xcconfig"; sourceTree = "<group>"; };
 		E632C3F726B0322D00F69B14 /* DragonFlyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonFlyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E632C3FA26B0322D00F69B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E632C3FC26B0322D00F69B14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CEACDAF1FB2807AC5AC9968 /* Pods_DragonFlyExample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30CE286AFD7E22480CD92507 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9414CA449EF1EF7805F1D803 /* Pods-DragonFlyExample.debug.xcconfig */,
+				1F37FD00B24F979D6C5E5F1F /* Pods-DragonFlyExample.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		88B2199BA287B279D10CE749 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				372B8DBFCA1D1C0DC29E15A0 /* Pods_DragonFlyExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E632C3EE26B0322D00F69B14 = {
 			isa = PBXGroup;
 			children = (
 				E632C3F926B0322D00F69B14 /* DragonFlyExample */,
 				E632C3F826B0322D00F69B14 /* Products */,
+				30CE286AFD7E22480CD92507 /* Pods */,
+				88B2199BA287B279D10CE749 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E632C40B26B0323000F69B14 /* Build configuration list for PBXNativeTarget "DragonFlyExample" */;
 			buildPhases = (
+				262B96EB3FAF93CAC8F97013 /* [CP] Check Pods Manifest.lock */,
 				E632C3F326B0322D00F69B14 /* Sources */,
 				E632C3F426B0322D00F69B14 /* Frameworks */,
 				E632C3F526B0322D00F69B14 /* Resources */,
+				6288D450710C0D33D3F48096 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		262B96EB3FAF93CAC8F97013 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DragonFlyExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6288D450710C0D33D3F48096 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DragonFlyExample/Pods-DragonFlyExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DragonFlyExample/Pods-DragonFlyExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DragonFlyExample/Pods-DragonFlyExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E632C3F326B0322D00F69B14 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		E632C40C26B0323000F69B14 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9414CA449EF1EF7805F1D803 /* Pods-DragonFlyExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		E632C40D26B0323000F69B14 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F37FD00B24F979D6C5E5F1F /* Pods-DragonFlyExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

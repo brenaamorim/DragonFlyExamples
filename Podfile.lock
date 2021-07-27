@@ -1,0 +1,21 @@
+PODS:
+  - DragonFly (1.0.1)
+
+DEPENDENCIES:
+  - DragonFly (from `https://github.com/beacarlos/DragonFly`)
+
+EXTERNAL SOURCES:
+  DragonFly:
+    :git: https://github.com/beacarlos/DragonFly
+
+CHECKOUT OPTIONS:
+  DragonFly:
+    :commit: fdde24ac727e04690df9df01006fd1b7b341fa55
+    :git: https://github.com/beacarlos/DragonFly
+
+SPEC CHECKSUMS:
+  DragonFly: 65efa9a7f5194725191678d014b8a1f5823b4cca
+
+PODFILE CHECKSUM: 28ff62fe9a6bea295400fa5856c0fe88be735917
+
+COCOAPODS: 1.10.1
