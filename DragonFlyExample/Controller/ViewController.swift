@@ -10,11 +10,51 @@ import DragonFly
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    let contentView = ExamplesView(frame: UIScreen.main.bounds)
+    let hexColor = Color(hex: "#FF5B5B")!
+    let rgbColor = Color(red: 255, green: 91, blue: 91)!
+    
+    override func loadView() {
+        self.view = contentView
     }
 
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupUI()
+    }
+    
+    func setupUI() {
+        contentView.hexaButton.addTarget(self, action: #selector(hexaButtonTapped), for: .touchUpInside)
+        contentView.rgbButton.addTarget(self, action: #selector(rgbButtonTapped), for: .touchUpInside)
+        contentView.randomButton.addTarget(self, action: #selector(randomButtonTapped), for: .touchUpInside)
+        contentView.lightButton.addTarget(self, action: #selector(lightButtonTapped), for: .touchUpInside)
+        contentView.darkButton.addTarget(self, action: #selector(darkButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func hexaButtonTapped() {
+        contentView.nameFunction.text = "Convert hexa to UIColor"
+        contentView.hexaButton.backgroundColor = hexColor.color()
+    }
+    
+    @objc func rgbButtonTapped() {
+        contentView.nameFunction.text = "Convert RGB to UIColor"
+        contentView.rgbButton.backgroundColor = rgbColor.color()
+    }
+    
+    @objc func randomButtonTapped() {
+        contentView.nameFunction.text = "Display a random color"
+        contentView.randomButton.backgroundColor = rgbColor.randomColor()
+    }
+    
+    @objc func lightButtonTapped() {
+        contentView.nameFunction.text = "Display lighter color"
+        contentView.lightButton.backgroundColor = hexColor.lighter()
+        
+    }
+    
+    @objc func darkButtonTapped() {
+        contentView.nameFunction.text = "Display darker color"
+        contentView.darkButton.backgroundColor = rgbColor.darker()
+    }
 }
 
