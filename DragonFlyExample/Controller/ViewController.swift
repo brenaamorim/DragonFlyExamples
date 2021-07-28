@@ -29,6 +29,8 @@ class ViewController: UIViewController {
         contentView.randomButton.addTarget(self, action: #selector(randomButtonTapped), for: .touchUpInside)
         contentView.lightButton.addTarget(self, action: #selector(lightButtonTapped), for: .touchUpInside)
         contentView.darkButton.addTarget(self, action: #selector(darkButtonTapped), for: .touchUpInside)
+        contentView.gradientButton.addTarget(self, action: #selector(gradientButtonTapped), for: .touchUpInside)
+
     }
     
     @objc func hexaButtonTapped() {
@@ -43,7 +45,7 @@ class ViewController: UIViewController {
     
     @objc func randomButtonTapped() {
         contentView.nameFunction.text = "Display a random color"
-        contentView.randomButton.backgroundColor = rgbColor.randomColor()
+        contentView.randomButton.backgroundColor = Color.randomColor()
     }
     
     @objc func lightButtonTapped() {
@@ -55,6 +57,17 @@ class ViewController: UIViewController {
     @objc func darkButtonTapped() {
         contentView.nameFunction.text = "Display darker color"
         contentView.darkButton.backgroundColor = rgbColor.darker()
+    }
+    
+    @objc func gradientButtonTapped() {
+        contentView.nameFunction.text = "Display darker color"
+        // Create a gradient layer
+        let gradientLayer = Color.gradient(UIColor.orange, secondColor: UIColor.yellow)
+        // Set gradient frame
+        gradientLayer?.frame = contentView.gradientButton.bounds
+        
+        // Add gradient to button
+        contentView.gradientButton.layer.insertSublayer(gradientLayer!, at: 0)
     }
 }
 

@@ -1,5 +1,5 @@
 PODS:
-  - DragonFly (1.0.1)
+  - DragonFly (1.0.2)
 
 DEPENDENCIES:
   - DragonFly (from `https://github.com/beacarlos/DragonFly`)
@@ -10,11 +10,11 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   DragonFly:
-    :commit: fdde24ac727e04690df9df01006fd1b7b341fa55
+    :commit: 20ce1902dd7fe14025d02fc869e44d67e6554d28
     :git: https://github.com/beacarlos/DragonFly
 
 SPEC CHECKSUMS:
-  DragonFly: 65efa9a7f5194725191678d014b8a1f5823b4cca
+  DragonFly: 0584d92a26b07bed6dc46c0304dc3791d633aa51
 
 PODFILE CHECKSUM: 28ff62fe9a6bea295400fa5856c0fe88be735917
 

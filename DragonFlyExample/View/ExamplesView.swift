@@ -62,6 +62,13 @@ class ExamplesView: UIView {
         return button
     }()
     
+    lazy var gradientButton: UIButton = {
+        var button = UIButton()
+        button.backgroundColor = .black
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     func setUI() {
         self.backgroundColor = .white
         addSubview(nameFunction)
@@ -70,6 +77,7 @@ class ExamplesView: UIView {
         addSubview(randomButton)
         addSubview(lightButton)
         addSubview(darkButton)
+        addSubview(gradientButton)
         setupConstraints()
     }
     
@@ -113,5 +121,13 @@ class ExamplesView: UIView {
             darkButton.heightAnchor.constraint(equalToConstant: 100),
             darkButton.widthAnchor.constraint(equalToConstant: 100)
         ])
+        
+        NSLayoutConstraint.activate([
+            gradientButton.topAnchor.constraint(equalTo: darkButton.bottomAnchor, constant: 16),
+            gradientButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            gradientButton.heightAnchor.constraint(equalToConstant: 100),
+            gradientButton.widthAnchor.constraint(equalToConstant: 100)
+        ])
+
     }
 }
