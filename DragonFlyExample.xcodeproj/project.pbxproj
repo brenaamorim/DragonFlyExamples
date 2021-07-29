@@ -11,6 +11,7 @@
 		77D328F526B2D7A000D3372F /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D328F426B2D7A000D3372F /* TabBarViewController.swift */; };
 		77D328F726B2DB6300D3372F /* FontsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D328F626B2DB6300D3372F /* FontsViewController.swift */; };
 		77D328F926B2DEEF00D3372F /* FontsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D328F826B2DEEF00D3372F /* FontsView.swift */; };
+		77FE7F1026B36E03003ED2F2 /* DancingScript-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77FE7F0F26B36DDD003ED2F2 /* DancingScript-Regular.ttf */; };
 		E632C3FB26B0322D00F69B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E632C3FA26B0322D00F69B14 /* AppDelegate.swift */; };
 		E632C3FD26B0322D00F69B14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E632C3FC26B0322D00F69B14 /* SceneDelegate.swift */; };
 		E632C3FF26B0322D00F69B14 /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E632C3FE26B0322D00F69B14 /* ColorsViewController.swift */; };
@@ -24,6 +25,7 @@
 		77D328F426B2D7A000D3372F /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		77D328F626B2DB6300D3372F /* FontsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsViewController.swift; sourceTree = "<group>"; };
 		77D328F826B2DEEF00D3372F /* FontsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontsView.swift; sourceTree = "<group>"; };
+		77FE7F0F26B36DDD003ED2F2 /* DancingScript-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-Regular.ttf"; sourceTree = "<group>"; };
 		9414CA449EF1EF7805F1D803 /* Pods-DragonFlyExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonFlyExample.debug.xcconfig"; path = "Target Support Files/Pods-DragonFlyExample/Pods-DragonFlyExample.debug.xcconfig"; sourceTree = "<group>"; };
 		E632C3F726B0322D00F69B14 /* DragonFlyExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonFlyExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E632C3FA26B0322D00F69B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		77FE7F0B26B36BA2003ED2F2 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				77FE7F0F26B36DDD003ED2F2 /* DancingScript-Regular.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		88B2199BA287B279D10CE749 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +94,7 @@
 		E632C3F926B0322D00F69B14 /* DragonFlyExample */ = {
 			isa = PBXGroup;
 			children = (
+				77FE7F0B26B36BA2003ED2F2 /* Font */,
 				E632C40E26B037AD00F69B14 /* App */,
 				E632C40F26B037BC00F69B14 /* Controller */,
 				E632C41026B037D700F69B14 /* View */,
@@ -180,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77FE7F1026B36E03003ED2F2 /* DancingScript-Regular.ttf in Resources */,
 				E632C40426B0323000F69B14 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
