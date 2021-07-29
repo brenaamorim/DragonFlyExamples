@@ -8,9 +8,9 @@
 import UIKit
 import DragonFly
 
-class ViewController: UIViewController {
+class ColorsViewController: UIViewController {
 
-    let contentView = ExamplesView(frame: UIScreen.main.bounds)
+    let contentView = ColorsView(frame: UIScreen.main.bounds)
     let hexColor = Color(hex: "#FF5B5B")!
     let rgbColor = Color(red: 255, green: 91, blue: 91)!
     
