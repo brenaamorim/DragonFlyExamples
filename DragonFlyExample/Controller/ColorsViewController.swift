@@ -50,19 +50,19 @@ class ColorsViewController: UIViewController {
     
     @objc func lightButtonTapped() {
         contentView.nameFunction.text = "Display lighter color"
-        contentView.lightButton.backgroundColor = hexColor.lighter()
+        contentView.lightButton.backgroundColor = hexColor.lighter(.lighter)
         
     }
     
     @objc func darkButtonTapped() {
         contentView.nameFunction.text = "Display darker color"
-        contentView.darkButton.backgroundColor = rgbColor.darker()
+        contentView.darkButton.backgroundColor = rgbColor.darker(.darkerHigh)
     }
     
     @objc func gradientButtonTapped() {
         contentView.nameFunction.text = "Display darker color"
         // Create a gradient layer
-        let gradientLayer = Color.gradient(UIColor.orange, secondColor: UIColor.yellow)
+        let gradientLayer = Color.gradient(UIColor.orange, secondColor: hexColor.color())
         // Set gradient frame
         gradientLayer?.frame = contentView.gradientButton.bounds
         
